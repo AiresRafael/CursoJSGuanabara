@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+
+    <input type="number" name="text1" id="text1"> <br> + <br>
+    <input type="number" name="test2" id="text2"> <br><br>
+    <input type="button" value="mostrar" onclick="somar()">
+
+  
+
+    <div class="res"> <strong>Resultado</strong> </div>
+
+    <script>
+    
+    function somar() {
+
+        let text1 = document.querySelector('input#text1')
+        let test2 = document.querySelector('input#text2')
+        let res = document.querySelector('div.res')
+        let n1 = Number (text1.value)
+        let n2 = Number(text2.value)
+        let somar = n1 + n2 
+        res.innerHTML = `A soma entre ${n1} e ${n2} é:  ${somar}`
+
+
+    }
+    
+    
+    </script>
+
+</body>
+</html>

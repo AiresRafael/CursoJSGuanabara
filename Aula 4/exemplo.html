@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+		
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		
+		<title>Aula #11 | Sistema de Multas | Exe008</title>
+
+		<!-- Visual da nossa página -->
+		<style>
+			/* Fonte padrão da página */
+			body, input {
+				font: normal 18pt Arial;
+			}
+			/* Container para centralizar o conteúdo */
+			#container {
+				max-width: 600px;
+				margin-top: 2em;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+			}
+			/* Configuração do formulário */
+			input {
+				width: 100px;
+				padding: 5px;
+			}
+			/* Alterando a borda dos campos */
+			input[type='number'] {
+				border-radius: 5px;
+				border: 2px solid #07a0c3;
+			}
+			/* Adicionando brilho nos campos quando em foco */
+			input[type='number']:focus {
+				box-shadow: 0 0 12px #4ab9d3;
+				outline: 0;
+			}
+			/* Estilizando nosso botão */
+			input[type='button'] {
+				display: block;
+				margin: 20px auto;
+				width: 255px;
+			}
+			/* Configuração da área onde mostraremos o resultado */
+			div#res {
+				color: #423703;
+				background: #fff1d0;
+				margin: 30px auto;
+				max-width: 300px;
+				padding: 30px;
+			}
+		</style>
+	</head>
+
+	<body>	
+
+			<!-- início: #container -->
+			<div id="container">
+				
+				<h1>Sistema de multas</h1>
+
+				<label for="txtvel">Velocidade do carro</label>
+				<input type="number" name="txtvel" id="txtvel"> Km/h
+				<input type="button" value="Verificar" name="btnvel" onclick="calcular()">
+
+				<!-- Área para mostrar resultado -->
+				<div id="res">
+					Insira uma velocidade e clique em "Verificar" <!-- Mensagem padrão -->
+				</div>
+			</div> <!-- fim: #container -->
+			
+		<script>
+
+			// FUNÇÃO QUE VERIFICA A VELOCIDADE
+			function calcular() {
+				
+				// Definindo o limite de velocidade
+				var limiteDeVelocidade = 60;
+				
+				// Recebendo os elementos do site
+				var txtv = window.document.getElementById('txtvel');
+				var res = window.document.querySelector('div#res');
+				
+				// Convertendo o tipo
+				var vel = Number(txtv.value);
+
+				// TESTE PARA VER SE SERÁ MULTADO
+				// Velocidade negativa? Algo não está certo. Mostre uma mensagem de advertência
+				if (vel < 0) {
+					res.innerHTML = `<strong>${vel}Km/h???</strong> 🤔 Talvez você esteja de marcha ré.`;
+				}
+				// Ok. Velocidade maior que o permitido. MULTA NELE!
+				else if (vel > limiteDeVelocidade) {
+					res.style.background = '#e9bab9'; // Muda fundo para vermelho
+					res.style.color = '#471817'; // Muda letra para um vermelho mais escuro
+					res.innerHTML = `Você ultrapassou o limite de Velocidade de ${limiteDeVelocidade}Km/h. <strong>MULTADO!</strong>🚨`;
+				}
+				// Velocidade dentro do permitido? PARABÉNS, CONTINUE ASSIM. 
+				else {
+					res.style.background = '#b6d471'; // Muda fundo para verde
+					res.style.color = '#1d240c'; // Muda letra para verde mais escuro
+					res.innerHTML = `<strong>${vel}Km/h</strong> ainda está dentro do permitido. Continue assim.👍`;	
+				}
+			};
+		</script>
+
+	</body

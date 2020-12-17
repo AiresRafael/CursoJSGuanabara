@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Velocidade do Carro</title>
+    <style>
+    
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(189, 189, 189)
+    }
+    
+    h1{
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+    }
+    
+    </style>
+</head>
+<body>
+        <h1>Consulta de Multas</h1>
+
+        Digite a Velocidade do seu carro a baixo: <br> <br> <input type="number" name="velcar" id="velcar"> <br><br>
+        <br><br><div class="res">Verificar Multas</div> <br>
+        <input type="button" value="verificar" onclick="calcular()"> 
+        
+    
+    <script>
+    function calcular () {
+
+        let vcar = document.querySelector('input#velcar')
+        let res = document.querySelector('div.res')
+        let vel = Number (vcar.value)
+
+        res.innerHTML = `<p> Sua velocidade atual é de <strong> ${vel} </strong> km/h`
+            if (vel > 100) {
+                res.innerHTML += `Voce esta a cima da velocidade maxima permitida que é de <strong> 100 km/h </strong>  MULTADO!`
+            }
+            else {
+                res.innerHTML += `<p><strong> Dirija com cuidado!</strong>`
+            }     
+    }
+    
+</script>
+    
+</body>
+</html>

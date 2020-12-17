@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Minha segunda aula de DOM</title>
+<style>
+    body{
+        background-color: rgb(148, 148, 148);
+        font-family: Arial, Helvetica, sans-serif;
+        
+    }
+
+    div#area {
+        background-color: rgb(42, 139, 42);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        color: white;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center
+    }
+
+    
+</style>
+</head>
+
+<body>
+    <div id="area">
+        Interaja...
+
+    </div>
+<script>
+        let area = document.querySelector('div#area')
+
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', sair)
+
+    function clicar() {   
+        area.innerHTML = 'Clicou!'
+        area.style.background = 'red'
+    }
+    function entrar(){
+        let area = document.querySelector('div#area')
+        area.innerHTML = 'Entrou!'
+    }
+    function sair (){
+        let area = document.querySelector('div#area')
+        area.innerHTML = 'Saiu!'
+        area.style.background = 'green'
+    }
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!--    Desta maneira eu comento dentro e fora do nosso html-->
+
+<!--    Doctype é uma maneira de definir que estou ulizando html5   -->
+<!DOCTYPE html> 
+ <!--   Nessa linha eu defino a linguagem do meu codigo do site -->
+<html lang="pt-br">
+
+<!--    VARIAVEIS
+
+    <Para criar uma variavel, é necessario usar o var, let ou const antes>
+    <Var é uma variavel comum>
+    <Let é uma variavel utilizada dentro de um funçao>
+    <Const é uma variavel constante, onde o conteudo nao pode ser editado>
+    <indentificador de variavel é o apelido dado a ela>
+    <Os indentificadores podem começar com letras, $ ou _ >
+    <Nao podem começar com numeros>
+    <É possivel usar acentos e simbolos> 
+    <Nao pode conter espaços>
+    <Nao podem conter palavras reservadas como (var var)> 
+    <Uma variavel é um espaço na memoria que salva algo usando um indentificador>
+    <Maiusculas e minusculas fazem diferença na variavel>
+
+        ESPLICANDO TIPOS PRIMITIVOS
+
+    <Numeros inteiros ou quebrados, sao tratados como NUMBER no Js>
+    <Quando você quiser definir se algo é verdadeiro ou falso (True ou False)
+    voce utiliza booleans>
+    <Quando voce quer se referir a um conjunto de caracteres ou uma palavra
+    voce utiliza string>
+    <Para descobrir os tipos primitivos voce utiliza typeof>
+    <Para saber quantas letras tem na string utilizar nome variavel.leangth>
+    <Para deixar tudo maiusculo utilizar nome variavel.toUpperCase()
+    e para minusculas utilizar .toLowerCase()>
+-->
+
+<!--    TIPOS PRIMITIVOS
+    number
+        infinity
+        NaN
+    string
+    boolean
+    null
+    undefined
+    object
+        Array
+    function
+-->
+
+
+<!--    OPERADORES ARITIMETICOS 
+
+    O % é o RESTO da divisao INTEIRA (a sobra)
+    ** Significa elevado a 2 (potencia) (ao quadrado)
+-->
+
+
+<!--    OPERADORES DE ATRIBUIÇAO
+
+    let a = 5 + 3 == 8
+    let b = a % 5 == 3
+    let c = 5 * b ** 2 == 45
+    let d = 10 - a / 2 == 6
+    let e = 6 * 2 / d == 2
+    let f = b % e + 4 / e == 3  
+
+        AUTO ATRIBUIÇÃO
+    Sabemos que a vale 8, para mudar o valor de a podemos fazer:
+    let a = a + 1 == a vai passar a valer 9 
+    repare que a variavel let a recebeu dela mesma, a nova soma.
+    uma maneira rapida e pratica de fazer isso, é a-=1 ou a+=1
+
+    uma outra maneira ainda mais simples e mais utilizar é 
+     a-- ou a++ 
+-->
+
+<!--        OPERADORES DE IGUALDADE RELACIONAIS 
+
+    < Este sinal, significa MENOR QUE
+    > Este sinal, significa MAIOR QUE
+    >= Este sinal, significa MAIOR OU IGUAL
+    <= Este sinal, significa MENOR OU IGUAL
+    == Este sinal, significa IGUAL
+    === Este sinal, significa um operador de IGUALDADE restrita
+    (ele indentifica os tipos primitivos)
+    !== Este sinal, significa um operador de DESIGUALDADE restrita
+    != Este sinal, significa NAO IGUAL (nao diferente)
+-->
+
+<!--        OPERADORES LOGICOS  
+
+    ! Este sinal, significa uma NEGAÇÃO
+    && Este sinal, significa uma CONJUNÇÃO
+    || Este sinal, significa DISJUNÇÃO
+-->
+
+<!--        OPERADORES TERNARIO
+    ? :
+    Ele se chama TERNARIO pois ela junta 3 partes
+    teste ? verdadeiro : falso
+    ? é o  teste logico que da verdadeiro ou falso
+    Na esqueda de : fica oq acontece quando for verdadeiro
+    Na direita de : fica oq acontece quando for falso
+-->
+
+<!--        ANOTAÇÃO DOS OPERADORES
+
+    Em uma linha de comando, primeiro sao resolvidos os operadores
+    aritimedicos, depois os relacionais e só por ultimo os logicos
+
+        SOBRE !
+    se x ! true == false
+    se x ! false == true
+    ou seja, uma coisa que nao é verdadeira = false
+    e uma coisa que nao é falsa == verdadeira
+
+        SOBRE &&
+    && so ira retornar true se a resposta for true e true
+    pra qualquer outra resposta == false
+    true && true == true
+    true && false ==false
+    false && false == false
+    false && true == false
+
+        SOBRE ||
+    Se um dos fatores forem verdadeiros, o resultado é verdadeiro (true)
+    true || true == true
+    true || false == true
+    false || true = true
+    false || false = false
+-->
+
+<!--        EXEMPLOS    
+
+        COMO E FEITO EM JS // OQ SIGNIFICA            
+    idade >= 15 && idade <= 17 // a idade esta entre 15 e 17?
+    estado == 'RJ' || estado == 'SP' // o estado é RJ ou SP?
+    salario = 1500 && sexo != 'M' // o larario é acima de 1500 e nao é um homem
+
+    let media = 5.5
+    media > 7 ? 'APROVADO' : 'REPROVADO'
+
+    --------------------DOM--------------------------------
+ Arvore do DOM
+        window: 
+            locattion > Onde esta a localização do meu site
+            document  > É o documento atual
+            history   > Historico de navegação.      
+            
+        Como selecionar um iten em JS por Seletor:
+        window.document.querySelector('')
+        se for div usar iten#nome da div
+        se for classe usar iten.nome da classe
+        exemplo> ('p.primeiro') assim eu seleciono o PARAGRAFO com a classe PRIMEIRO.   
+
+
+        -------------------FUNÇÃO-----------------
+        No JS uma função é conjunto de codigos (linhas) que vao ser execultadas so quando o evento ocorrer.
+        Para uma função funionar, ela precisa estar dentro de um bloco {}
+        voce precisa nomea-lo de functionnome(){}
+
+
+        ------------------CONDIÇÕES EM JS ==============================
+        Uma condição deve estar sempre dentro de um bloco {}
+        exemplo:
+        if (nome da confiçao) {
+            a condiçao vai aqui 
+        }
+        else {
+            e a outra vai aqui
+        }
+
+
+        if quer dizer SIM (positivo, ou funcionou)
+        else quer dizer SE NAO (negativo ou nao funcionou)
+        exemplo
+        se (if) algo for aqui, faça isso
+        se nao (else), faça aquilo
+
+        usar else if para uma arvore de condiçao
+
+        CONDIÇOES MULTIPLAS
+        sao utilizada para trabalhar com valores FIXOS (sem intervalo de valores)
+        nesta condiçao utilizamos a EXPRESSAO switch (expressao) {}
+        para cada valor utilizamos CASE e para cada um dos CASES utilizamos um bloco {}
+        entre cada CASE, é necessario a utilizaçao do comando BREAK
+        se nenhum dos valores do case forem verdadeiros (if) ele retorna para o default (significa else)
+        o break é necessario para que o programa entenda que a soluçao foi encontrada e PARE 
+        (claro que na hora que a soluçao for encontrada dentro de algum dos cases
+        exemplo:
+
+        switch (nome){
+
+            case valor1:
+            break
+            case valor2:
+            break
+            case valor3:
+            break
+            default:
+            break
+        }
+
+        ========================REPETICOES==================
+
+        Sempre que ver a palavra WHILE, ler ela como ENQUANTO.
+        exemplo
+
+        funtion comerPizza() {
+            while (temfatia) {
+                comerfatia()
+            }    
+        }
+        ENQUANTO TIVER FATIA ELE COME, QUANDO ACABAR ELE ENCERRA O PROGRAMA.
+
+        Para fazer o programa repetir apos um bloco, eu utilizo o comando DO
+
+
+
+        ====================COMANDOS FOR ==========================
+        Estrutura basica do FOR 
+
+        for (inicio;teste;incr){}
+        detalhe = ele utiliza ponto e virgula e nao 2 pontos.
+-->
+
+
+   
+<!--    No head, fica toda a config do meu site  -->
+ <head>
+    <meta charset="UTF-8">
+    <meta name="Aula dois" content="Itens da minha aula de JS">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Aula de JS </title>
+
+
+<!--    No style, eu chamo o CSS e mudo o estilo do meu site-->
+<style>
+/*  Esta é uma maneira de comentar dentro do CSS     */
+        body{
+            font-family: sans-serif;
+            font: normal ;
+            background-color: rgb(170, 169, 170);
+            }
+
+        h1 {
+            color: rgb(255, 255, 20);
+                  }
+</style>
+</head>
+
+
+<body>
+<!--        Dentro do body, é onde fica o conteudo do meu site, inclusive os scripts-->    
+ 
+        <h1>Ola Mundo</h1>
+        <p> De uma olhada no codigo fonte da pagina para ter acesso as anotaçoes</p>
+
+<script>
+//      Todo script tem que estar dentro da chave de script 
+
+//  Esta é uma maneira de comentar em scripts
+/*  Esta é outra maneira de comentar em scripts */
+
+//  O alert, serve para criar um alerta na pagina
+//      alert('Olá Mundo!')
+
+//  O confirm, cria um alerta com a opçao de ok ou cancelar
+//      confirm('Esta gostando do Curso?')
+            
+//  O prompt cria um alerta com intereçao 
+           
+        let n1 = Number (prompt('Digite um numero: '))
+        let n2 = Number (prompt('Digite outro numero: '))
+        let s  = n1 + n2
+        alert(`A soma entre ${n1} e ${n2} é igual a ${s}`)
+
+
+
+/*  Para chamar uma variavel ou utilizar algum sinal apos o texto
+    dentro de uma frase, eu tenho que utilizar o sinal de + 
+    que no JS significa CONCATENAÇÃO ou ADIÇAO
+*/
+
+/*  Utilizar o metodo abaixo para nao precisar concatenar
+    O aluno ${nome da variavel} com ${nome da variavel} anos,
+    tirou  a nota ${nome da variavel} no curso de JS` (utilizar craze)
+*/
+             
+
+/*  Pra converter uma string para number posso utilizar o Number apos o =
+    ou o contrario ou n.toString() para fazer o numero ser string
+*/
+            
+</script>
+
+</body>
+</html>
